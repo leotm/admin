@@ -1,0 +1,13 @@
+{
+  "id": "ciee-global-institute-london",
+  "image-url": "https://venuescanner.s3.amazonaws.com/med_114437cde5517bbe410f3372a51deb25.jpg",
+  "name": "CIEE Global Institute-London - Greenwich",
+  "address": "CIEE Global Institute, 46-47 Russell Square, London, WC1B 4JP",
+  "amenities-first": ["Wifi", "Audiovisual", "Catering", "Extra space / Overnight", "Print/Scan/Copy"],
+  "layouts": ["Boardroom", "Classroom", "Cabaret", "Theatre"],
+  "about": "...",
+  "geolocation": {
+    "latitude": 51.539846,
+    "longitude": -0.111694
+  }
+}
