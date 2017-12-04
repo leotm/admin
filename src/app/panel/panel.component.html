@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col">
+
+    <h5 class="mb-3">{{heading}}</h5>
+
+    <div class="card p-3">
+      <div class="card-block">
+
+        <button class="btn cancel float-right mb-3" (click)="logout()">Logout</button>
+        <button class="btn add float-left mb-3" routerLink="/add" routerLinkActive="active">Add ></button>
+
+        <table class="table mb-0">
+          <thead class="thead-light">
+            <tr>
+              <th>First name</th>
+              <th>Surname</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr *ngFor="let user of users; index as i" data-toggle="tooltip" data-placement="top" title="Added: {{user[5] | date: 'dd/MM/yy @ HH:mm'}}&#13;Edited: {{user[6] | date: 'dd/MM/yy @ HH:mm'}}">
+              <td class="field" scope="row">{{user[0]}}</td>
+              <td class="field">{{user[1]}}</td>
+              <td class="field">{{user[2]}}</td>
+              <td class="field">{{user[3] | toAsterisk}}</td>
+              <td><button class="btn edit" routerLink="/edit/{{i}}" routerLinkActive="active">Edit ></button></td>
+              <td><button class="btn delete" (click)="delete(user)">Delete ></button></td>
+            </tr>
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+  </div>
+</div>

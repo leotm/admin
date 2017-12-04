@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-12 col-sm-8">
+
+    <h5 class="mb-3">{{heading}}</h5>
+
+    <form (submit)="addUser()" ngNativeValidate>
+
+      <div class="form-group">
+        <label for="username">Username:
+          <span>*</span>
+        </label>
+        <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username" placeholder="Username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="firstname">First name:
+          <span>*</span>
+        </label>
+        <input type="text" class="form-control" id="firstname" [(ngModel)]="firstname" name="firstname" placeholder="First name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="surname">Surname:
+          <span>*</span>
+        </label>
+        <input type="text" class="form-control" id="surname" [(ngModel)]="surname" name="surname" placeholder="Surname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:
+          <span>*</span>
+        </label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" placeholder="e.g. foo@bar.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:
+          <span>*</span>
+        </label>
+        <input type="password" class="form-control" id="password" pattern=".{6,16}" required title="6 to 16 characters" placeholder="******"
+          [(ngModel)]="password" name="password" required>
+      </div>
+
+      <button class="btn cancel float-left" (click)="cancel()">Cancel</button>
+      <button type="submit" class="btn add float-right">Add new user ></button>
+
+    </form>
+
+  </div>
+</div>
